@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Here is a list of browsers to test
+browsers=("chrome" "firefox" "edge")
+
+# Run these tests in each browser
+for browser in "${browsers[@]}"
+do
+  echo "Running tests in $browser"
+  npx cypress run --browser $browser
+done
+
+// This script will run the entire test suite once for each browser in the list. //

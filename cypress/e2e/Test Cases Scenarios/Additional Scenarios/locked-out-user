@@ -1,0 +1,15 @@
+describe('User is Locked Out', () => {
+    it('cannot log in', () => {
+      cy.visit('/')
+      cy.get('[data-test="username"]').type('locked_out_user')
+      cy.get('[data-test="password"]').type('secret_sauce')
+      cy.get('[data-test="login-button"]').click()
+      cy.get('[data-test="error-message"]').contains('Epic sadface: Sorry, this user has been locked out.')
+    })
+  
+    it('images are not loading', () => {
+      cy.visit('/inventory.html')
+      cy.get('.inventory_item_img').should('have.attr', 'src').and('eq', '')
+    })
+  })
+  

@@ -1,0 +1,10 @@
+# Run these tests in Chrome
+npx cypress run --browser chrome
+
+# Run  these tests in Firefox
+npx cypress run --browser firefox
+
+# Run  these tests in Edge
+npx cypress run --browser edge
+
+// To run tests in a different browser, you can specify the browser when running the test command.//
